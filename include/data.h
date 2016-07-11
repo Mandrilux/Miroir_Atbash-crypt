@@ -28,5 +28,6 @@ char		 get_indice(char c);
 
 int		 main(int argc, char **argv);
 int		 atbash(char *str);
+int		 free_double_char(char **tab);
 
 #endif /* DATA_H_ */

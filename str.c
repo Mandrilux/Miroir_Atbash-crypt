@@ -48,16 +48,22 @@ char     get_indice(char c)
   char  alpha[27] = {0};
   int   i = -1;
   int   s = 'A';
+  int	lower = 0;
 
   while (++i < 26)
     alpha[i] = s + i;
   i = -1;
+  if (c >= 'a' && c <= 'z')
+    {
+      c -= 32;
+      lower = 1;
+    }
   while (alpha[++i] != '\0')
     {
       if (alpha[i] == c)
 	break;
     }
-  if (c >= 'a' && c <= 'z')
-    return (alpha[25-2] + 32);
-  return (alpha[25-2]);
+  if (lower == 1)
+    return (alpha[25-i] + 32);
+  return (alpha[25-i]);
 }
