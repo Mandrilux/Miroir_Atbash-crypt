@@ -11,7 +11,7 @@ OBJ	=	$(SRC:.c=.o)
 
 CC	=	/usr/bin/gcc
 
-CFLAGS	=	-W -Wall -Wextra -ansi -pedantic -O3  -std=gnu99 
+CFLAGS	=	-W -Wall -Wextra -ansi -pedantic -O3 -std=gnu99 
 
 CFLAGS  +=      -I$(INC_DIR) -lm
 
